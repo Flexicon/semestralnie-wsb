@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+
+  "name": "SemestralnieWSB",
+  "description": "Powoduje ze Plan Zajec pojawia sie w formie Semestralnej.",
+  "version": "0.2",
+
+  "browser_action": {
+   "default_icon": "icon.png",
+   "default_popup": "popup.html"
+  },
+
+  "icons": {
+    "16": "icon-16.png",
+    "48": "icon-48.png",
+    "128": "icon-128.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://wu.wsb.edu.pl/WU/PodzGodzin.aspx"],
+      "js": ["zmien.js"],
+      "runs_at": "document_end"
+    }
+  ]
+}
